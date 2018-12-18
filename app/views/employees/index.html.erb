@@ -1,0 +1,10 @@
+<h1>Here are the employees!</h1>
+
+<% @employees.each do |employee|%>
+<ol>
+
+      <%= link_to employee.first_name + " " + employee.last_name, employee_path(employee) %>
+
+</ol>
+
+<% end %>

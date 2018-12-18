@@ -1,0 +1,18 @@
+<h2>Create a new employee!</h2>
+
+<%= form_for(@employee) do |f|%>
+  <label>First Name:</label>
+  <%= f.text_field :first_name%>
+  <label>Last Name:</label>
+  <%= f.text_field :last_name%>
+  <label>Alias:</label>
+  <%= f.text_field :alias%>
+  <label>Title:</label>
+  <%= f.text_field :title%>
+  <label>Office:</label>
+  <%= f.text_field :office%>
+  <label>Img_url:</label>
+  <%= f.text_field :img_url%>
+  <%= f.collection_select(:dog_id, Dog.all, :id, :name, prompt: true) %>
+  <%= f.submit "Create Employee" %>
+<% end %>
