@@ -1,0 +1,8 @@
+<h1>Here are the dogs who rule the world!</h1>
+
+
+  <% @dogs.select do |dog| %>
+  <ol>
+  <%= link_to dog.name, dog_path(dog)%>
+</ol>
+  <% end %>
