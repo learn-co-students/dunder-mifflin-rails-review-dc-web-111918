@@ -1,0 +1,16 @@
+<%=form_for(@employee) do |e|%>
+  <%=e.label :first_name%>
+  <%=e.text_field :first_name%>
+  <%=e.label :last_name%>
+  <%=e.text_field :last_name%>
+  <%=e.label :alias%>
+  <%=e.text_field :alias%>
+  <%=e.label :title%>
+  <%=e.text_field :title%>
+  <%=e.label :office%>
+  <%=e.text_field :office%>
+  <%=e.label :img_url%>
+  <%=e.text_field :img_url%>
+  <%= e.collection_select(:dog_id, Dog.all, :id, :name, prompt: true) %>
+  <%=e.submit%>
+<%end%>
